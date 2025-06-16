@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Chromepanion</title>
+    <meta name="description" content="Privacy Policy for Chromepanion - Your privacy-first local AI web search assistant">
+    <style>
+        /* CSS Variables for Light Theme */
+        :root {
+            --background: #ffffff;
+            --foreground: #1d1d1f;
+            --card: #ffffff;
+            --card-foreground: #1d1d1f;
+            --border: #d1d1d6;
+            --muted-foreground: #8e8e93;
+            --primary: #007aff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Dark Theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background: #000000;
+                --foreground: #ffffff;
+                --card: #1c1c1e;
+                --card-foreground: #ffffff;
+                --border: #38383a;
+                --muted-foreground: #8e8e93;
+                --primary: #0a84ff;
+            }
+        }
+
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            font-feature-settings: 'kern' 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--background);
+            color: var(--foreground);
+            line-height: 1.6;
+        }
+
+        /* Apple Typography Classes */
+        .text-apple-title2 {
+            font-size: 1.75rem;
+            line-height: 1.25;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        .text-apple-title3 {
+            font-size: 1.375rem;
+            line-height: 1.3;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .text-apple-body {
+            font-size: 1.0625rem;
+            line-height: 1.35;
+            font-weight: 400;
+        }
+
+        .text-apple-callout {
+            font-size: 1rem;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            color: var(--muted-foreground);
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-sm);
+            padding: 1.5rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: rgba(var(--border), 0.8);
+        }
+
+        .card h2 {
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            margin-bottom: 0.75rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            margin-left: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card li {
+            margin-bottom: 0.5rem;
+            color: var(--muted-foreground);
+        }
+
+        .card li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Text Colors */
+        .text-foreground {
+            color: var(--foreground);
+        }
+
+        .text-muted-foreground {
+            color: var(--muted-foreground);
+        }
+
+        /* Spacing */
+        .space-y-3 > * + * {
+            margin-top: 0.75rem;
+        }
+
+        .space-y-4 > * + * {
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
+            .text-apple-title2 {
+                font-size: 1.5rem;
+            }
+
+            .text-apple-title3 {
+                font-size: 1.25rem;
+            }
+
+            .card {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+            font-size: 1.25rem;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .theme-toggle:hover {
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Dark theme class for manual toggle */
+        .dark {
+            --background: #000000;
+            --foreground: #ffffff;
+            --card: #1c1c1e;
+            --card-foreground: #ffffff;
+            --border: #38383a;
+            --muted-foreground: #8e8e93;
+            --primary: #0a84ff;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span id="theme-icon">🌙</span>
+    </button>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="text-apple-title2 text-foreground">Privacy Policy</h1>
+            <p class="text-apple-body text-muted-foreground">
+                Last updated: <span id="last-updated"></span>
+            </p>
+        </div>
+
+        <div class="content">
+            <!-- Privacy-First Approach -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Privacy-First Design</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        Chromepanion is designed with your privacy as the top priority. All AI processing 
+                        happens locally on your device using Ollama, ensuring your conversations and data 
+                        never leave your computer.
+                    </p>
+                    <p class="text-apple-body text-foreground">
+                        We believe in transparent, local AI assistance that respects your privacy and 
+                        gives you complete control over your data.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Data Collection -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">What Data We Collect</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-apple-callout text-foreground">Local Storage Only</h3>
+                        <ul>
+                            <li>• Chat history and conversations (stored locally in your browser)</li>
+                            <li>• AI model preferences and settings</li>
+                            <li>• Persona selections and configurations</li>
+                            <li>• Theme and interface preferences</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-apple-callout text-foreground">No Remote Data Collection</h3>
+                        <p class="text-muted-foreground">
+                            Chromepanion does not collect, store, or transmit any personal data to external 
+                            servers. All your information remains on your device.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Google Search Integration -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Google Search Integration</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        When you use web search features, Chromepanion fetches search results from Google.
+                        This interaction is subject to Google's privacy policy and terms of service.
+                    </p>
+                    <p class="text-muted-foreground">
+                        Search queries are sent directly to Google's servers, not through our systems.
+                        The search results are then processed locally by your Ollama AI models.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Local AI Processing -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Local AI Processing</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        All AI conversations and analysis happen entirely on your device through Ollama.
+                        Your messages, search results, and AI responses are processed locally without
+                        any external API calls.
+                    </p>
+                    <p class="text-muted-foreground">
+                        This ensures complete privacy and allows you to use Chromepanion even without
+                        an internet connection (except for web search features).
+                    </p>
+                </div>
+            </section>
+
+            <!-- Data Security -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Data Security</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        Your data is stored locally using your browser's secure storage mechanisms.
+                        Chat history and settings are encrypted and stored in your browser's local storage.
+                    </p>
+                    <p class="text-muted-foreground">
+                        You can delete all stored data at any time through the settings page or by
+                        clearing your browser's extension data.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Your Rights -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Your Rights and Control</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        Since all data is stored locally on your device, you have complete control:
+                    </p>
+                    <ul>
+                        <li>• View and export your chat history at any time</li>
+                        <li>• Delete individual conversations or all data</li>
+                        <li>• Modify or update your preferences</li>
+                        <li>• Uninstall the extension to remove all data</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class="card">
+                <h2 class="text-apple-title3 text-foreground">Questions or Concerns</h2>
+                <div class="space-y-3">
+                    <p class="text-apple-body text-foreground">
+                        If you have any questions about this privacy policy or how Chromepanion handles
+                        your data, please feel free to reach out through our support channels.
+                    </p>
+                    <p class="text-muted-foreground">
+                        Remember: Your privacy is our priority, and all processing happens locally on
+                        your device.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Set the last updated date
+        document.getElementById('last-updated').textContent = new Date().toLocaleDateString();
+
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark');
+                themeIcon.textContent = '🌙';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.add('dark');
+                themeIcon.textContent = '☀️';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Initialize theme based on user preference
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeIcon = document.getElementById('theme-icon');
+
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.body.classList.add('dark');
+                themeIcon.textContent = '☀️';
+            } else {
+                themeIcon.textContent = '🌙';
+            }
+        }
+
+        // Initialize theme on page load
+        initTheme();
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (!localStorage.getItem('theme')) {
+                const themeIcon = document.getElementById('theme-icon');
+                if (e.matches) {
+                    document.body.classList.add('dark');
+                    themeIcon.textContent = '☀️';
+                } else {
+                    document.body.classList.remove('dark');
+                    themeIcon.textContent = '🌙';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
